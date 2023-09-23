@@ -1,2 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="flex justify-center m-auto"><div class="text-7xl">Finder</div></div>
+<button class="flex justify-center m-auto border-2 p-2 pl-4 text-left"
+	><a class="flex m-auto" href="/viewer">View</a></button
+>
