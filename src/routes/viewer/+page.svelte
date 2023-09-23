@@ -48,7 +48,7 @@
 </script>
 
 
-<form action="?/processImage" method="POST">
+<form action="?/processImage" method="POST" enctype="multipart/form-data">
 
         <div id="container">
             <!-- svelte-ignore a11y-media-has-caption -->
