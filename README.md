@@ -25,4 +25,4 @@ Finder_ was developed during hackUMBC 2023 by the following individuals:
 - Isaac Dugan, Backend Lead
 - John Meyers, Frontend Lead
 - James "Mikey" Montebell, Database Lead
-- Brian Bowers, Team Leader & Design Lead
+- Brian Bowers, Design Lead
