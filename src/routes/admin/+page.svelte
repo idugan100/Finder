@@ -7,8 +7,6 @@
 	$: data;
 </script>
 
-// crud on missing_persons // display log w/ filter
-
 <form method="POST">
 	<label for="file">Upload picture</label>
 	<input
