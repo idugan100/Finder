@@ -15,9 +15,9 @@ Video Will Go Here
 
 ## Arcitecture of Finder_
 
--Slevte with Tailwind, HTML, TypeScript and JavaScript for the site's frontend
--MySQL for database
--Face++ for facial comparisons
+- Slevte with Tailwind, HTML, TypeScript and JavaScript for the site's frontend
+- MySQL for database
+- Face++ for facial comparisons
 
 ## Team Finder_
 Finder_ was developed during hackUMBC 2023 by the following individuals:
