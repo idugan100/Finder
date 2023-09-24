@@ -61,7 +61,7 @@
 		<video autoplay id="videoElement" bind:this={video} />
 	</div>
 	<canvas hidden id="canvas" width="640" height="480" bind:this={canvas} />
-	<input hidden type="file" name="clip" id="" bind:this={file_input} />
+	<input hidden type="text" name="clip" id="" bind:this={file_input} />
 	<input hidden type="text" name="location" bind:this={location} id="" />
 	<button
 		on:click|preventDefault={flipRecording}
