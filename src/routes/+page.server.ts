@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import type { Actions } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/server';
+import { db, user } from '$lib/server/server';
 import type { admin_users } from '$lib/types';
 import { onMount } from 'svelte';
 

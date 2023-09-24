@@ -39,6 +39,22 @@ export const actions: Actions = {
 				result = 'Error deleting person';
 			});
 	}
+	// update: async ({ url }) => {
+	// 	const id = url.searchParams.get('id');
+	// 	if (!id) {
+	// 		result = 'Error deleting person';
+	// 	}
+	// 	(await db)
+	// 		.query(
+	// 			`update missing_persons set name="${name}", location_last_seen="${location}", date_last_seen="${date}" where id=${id}`
+	// 		)
+	// 		.then(() => {
+	// 			result = 'Person deleted';
+	// 		})
+	// 		.catch(() => {
+	// 			result = 'Error deleting person';
+	// 		});
+	// }
 } satisfies Actions;
 
 export const load = (async () => {
