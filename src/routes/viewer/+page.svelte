@@ -55,6 +55,7 @@
 	enctype="multipart/form-data"
 	bind:this={form}
 	id="form"
+	use:enhance
 >
 	<div id="container">
 		<!-- svelte-ignore a11y-media-has-caption -->
@@ -74,7 +75,6 @@
 		type="submit"
 		id="submit">submit</button
 	>
-
 </form>
 <div>{data.response}</div>
 

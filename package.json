@@ -29,8 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"mysql2": "^3.6.1",
-		"@esbuild/darwin-x64": "^0.19.3",
-		"@google-cloud/storage": "^7.1.0"
+		"@google-cloud/storage": "^7.1.0",
+		"mysql2": "^3.6.1"
 	}
 }

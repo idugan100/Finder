@@ -27,6 +27,7 @@ export type log = {
 	pct_match: number;
 	person_id: number;
 	location: string;
+	time: string;
 };
 
 export type admin_users = {
