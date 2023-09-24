@@ -13,4 +13,6 @@ export async function connect() {
 
 const db = connect();
 
-export { db };
+let user = '';
+
+export { db, user };
