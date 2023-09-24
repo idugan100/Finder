@@ -35,14 +35,14 @@
 			placeholder="Date last seen"
 		/><br /><br />
 
-		<label class="block text-gray-700 text-md font-bold mb-2" for="file">Upload picture</label><br
-		/>
+		<label class="block text-gray-700 text-md font-bold mb-2" for="file">Upload photo URL:</label
+		><br />
 		<div class="flex items-center justify-center text-center">
 			<input
 				class="m-auto text-lg rounded-lg absolute lg bg-[#f1d592] drop-shadow-lg hover:bg-[#e6c984] py-2 px-4 w-72"
 				type="text"
 				name="photo_path"
-				placeholder="Photo path"
+				placeholder="Photo URL"
 				accept=".jpg, .jpeg, .png"
 				required
 			/><br /><br />
@@ -62,20 +62,20 @@
 		<div
 			class="flex flex-col justify-center items-center 2xl bg-white shadow-md rounded-lg px-12 pt-6 pb-10 mb-4 w-1/3 m-auto gap-2"
 		>
-			<img src={missing_person.photo_path} alt="" />
+			<img class="rounded-lg" src={missing_person.photo_path} alt="" />
 			<div>{missing_person.name}</div>
 			<div>{missing_person.location_last_seen}</div>
 			<div>{missing_person.date_last_seen}</div>
 			<form action="?/delete&id={missing_person.id}" method="POST">
 				<button
-					class="text-xl m-auto rounded-lg lg bg-[#f1d592] drop-shadow-lg hover:bg-[#e6c984] py-2 px-4"
+					class="text-xl m-auto rounded-lg lg bg-red-500/80 hover:bg-red-500 py-2 px-4 indent-0"
 					type="submit">Delete Missing Person</button
 				>
 			</form>
 		</div>
 	{/each}
 	<div class="flex justify-center">
-		<h1 class="text-5xl">Logs</h1>
+		<h1 class="text-5xl font-bold">Logs</h1>
 	</div>
 
 	{#each data.log as log}
@@ -83,8 +83,8 @@
 			<div
 				class="flex flex-col justify-center items-center 2xl bg-white shadow-md rounded-lg px-12 pt-6 pb-10 mb-4 w-1/3 m-auto gap-2"
 			>
-				<img src={log.clip_path} alt="" />
-				<div class="text-3xl">{log.name + ' found!!!'}</div>
+				<img class="rounded-lg" src={log.clip_path} alt="" />
+				<div class="text-1xl font-bold">{'Possible match for: ' + log.name}</div>
 				<div>{log.prc_match}%</div>
 				<div>{log.location}</div>
 				<div>{log.time}</div>

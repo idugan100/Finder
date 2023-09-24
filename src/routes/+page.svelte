@@ -15,7 +15,7 @@
 	><a class="flex m-auto text-2xl text-center" href="/viewer">Start Camera</a></button
 >
 <br /><br /><br />
-<div class="flex justify-center m-auto"><div class="text-3xl">Admin</div></div>
+<div class="flex justify-center m-auto"><div class="text-3xl">Admin Panel</div></div>
 <br />
 
 <div class="flex justify-center items-center m-auto text-center w-full max-w-xs">

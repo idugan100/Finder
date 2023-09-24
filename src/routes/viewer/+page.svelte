@@ -6,9 +6,9 @@
 
 	//recording loop
 	function flipRecording(event: any) {
-		location = prompt('please enter your address') ?? '';
-		while (location == '') {
-			location = prompt('please enter your address') ?? '';
+		location.value = prompt('please enter your address') ?? '';
+		while (location.value == '') {
+			location.value = prompt('please enter your address') ?? '';
 		}
 	}
 	let location: any;
