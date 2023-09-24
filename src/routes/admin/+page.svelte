@@ -7,6 +7,8 @@
 	$: data;
 </script>
 
+
+
 // crud on missing_persons // display log w/ filter
 <br><br><br><br>
 <div class="flex justify-center items-center m-auto text-center w-full max-w-xs pt-18">
