@@ -4,7 +4,7 @@
 
 ## About Finder_
 
-Finder is an open source web application with the goal of finding missing people
+Finder is a powerful, open-source web application designed with the primary objective of aiding in the search and recovery efforts for missing persons. Leveraging cutting-edge technology and a dedicated community, our platform strives to make a meaningful impact by facilitating the identification and reunion of lost loved ones with their families and loved ones.
 
 ## How to use Finder_
 
