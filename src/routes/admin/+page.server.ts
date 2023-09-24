@@ -58,7 +58,11 @@ export const actions: Actions = {
 } satisfies Actions;
 
 export const load = (async () => {
-	var [rows] = await (await db).query('SELECT * FROM log');
+	var [rows] = await (
+		await db
+	).query(
+		'SELECT log.* , name FROM log join missing_persons on missing_persons.id=log.person_id  order by prc_match desc'
+	);
 	var [rows1] = await (await db).query('SELECT * FROM missing_persons');
 
 	return {

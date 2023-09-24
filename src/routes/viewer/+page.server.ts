@@ -5,13 +5,14 @@ import { FACE_KEY, FACE_SECRET } from '$env/static/private';
 import fs from 'fs/promises';
 import { Storage } from '@google-cloud/storage';
 import * as path from 'path';
-
+import { db } from '$lib/server/server';
 
 let status: number = 0;
 export const actions: Actions = {
 	processImage: async ({ request, fetch }) => {
 		const data = await request.formData();
 		var input = data.get('clip') as string;
+		const location = data.get('location') as string;
 
 		const binaryString = input.replace(/^data:image\/\w+;base64,/, '');
 		console.log(binaryString);
@@ -46,32 +47,46 @@ export const actions: Actions = {
 			}
 
 			await uploadFile();
+			//for each missing person
+			var [rows1] = await (await db).query('SELECT * FROM missing_persons');
+			console.log(rows1);
+			for (const row of rows1 as any[]) {
+				// Access individual properties of each row using row.propertyName
+				// Do something with the data here
+				console.log(row);
+				try {
+					const apiUrl =
+						'https://api-us.faceplusplus.com/facepp/v3/compare?api_key=' +
+						FACE_KEY +
+						'&api_secret=' +
+						FACE_SECRET +
+						'&image_url1=' +
+						row.photo_path +
+						'&image_url2=https://storage.googleapis.com/hackumbc1/' +
+						filename_string;
 
-			try {
-				const apiUrl =
-					'https://api-us.faceplusplus.com/facepp/v3/compare?api_key=' +
-					FACE_KEY +
-					'&api_secret=' +
-					FACE_SECRET +
-					'&image_url1=https://health.wyo.gov/wp-content/uploads/2020/08/happy-guy-celebrating-with-hands-up-469083_300x.jpg&image_url2=https://storage.googleapis.com/hackumbc1/' +
-					filename_string;
+					const response = await fetch(apiUrl, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json' // Set the content type to JSON
+						}
+					});
 
-				const response = await fetch(apiUrl, {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json' // Set the content type to JSON
+					if (response.ok) {
+						const responseData = await response.json();
+						console.log(responseData);
+						(await db).query(
+							`INSERT INTO log (clip_path, prc_match, location, person_id) VALUES ("${
+								'https://storage.googleapis.com/hackumbc1/' + filename_string
+							}","${responseData.confidence}", "${location}","${row.id}" )`
+						);
+						//
+					} else {
+						console.error('Error:', response.statusText);
 					}
-				});
-
-				if (response.ok) {
-					const responseData = await response.json();
-					console.log(responseData);
-					//
-				} else {
-					console.error('Error:', response.statusText);
+				} catch (error) {
+					console.error('Error:', error);
 				}
-			} catch (error) {
-				console.error('Error:', error);
 			}
 		} else {
 			status = 400;

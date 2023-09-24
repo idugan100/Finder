@@ -19,15 +19,17 @@ export type missing_persons_final = {
 	name: string;
 	location_last_seen: string;
 	date_last_seen: string;
+	logs: log[];
 };
 
 export type log = {
 	id: number;
 	clip_path: string;
-	pct_match: number;
+	prc_match: number;
 	person_id: number;
 	location: string;
 	time: string;
+	name: string;
 };
 
 export type admin_users = {
