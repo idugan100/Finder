@@ -10,20 +10,19 @@ Finder is a powerful, open-source web application designed with the primary obje
 
 Video Will Go Here
 <!--div align="center">
-<vid src="Mikey'sDemo" alt="Demo" width = "300" height="300">
+<video src="Mikey'sDemo" alt="Demo" width = "300" height="300">
 </div-->
 
 ## Arcitecture of Finder_
 
-- Slevte with Tailwind, HTML, TypeScript and JavaScript for the site's frontend
-- MySQL for database
-- Face++ for facial comparisons
+- Svelte with Tailwind, HTML, TypeScript and JavaScript for Finder_'s frontend
+- MySQL for Missing Persons Database
+- Face++ for Facial Comparisons
+- Google Cloud for dynamic image allocation
 
 ## Team Finder_
 Finder_ was developed during hackUMBC 2023 by the following individuals:
 - Isaac Dugan, Backend Lead
 - John Meyers, Frontend Lead
 - James "Mikey" Montebell, Database Lead
-- Brian Bowers, Team Leader
-
-
+- Brian Bowers, Team Leader & Design Lead
