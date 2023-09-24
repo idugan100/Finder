@@ -56,13 +56,16 @@
 	enctype="multipart/form-data"
 	bind:this={form}
 	id="form"
+	use:enhance
 >
 	<div id="container">
 		<!-- svelte-ignore a11y-media-has-caption -->
 		<video autoplay id="videoElement" bind:this={video} />
 	</div>
 	<canvas hidden id="canvas" width="640" height="480" bind:this={canvas} />
+
 	<input hidden type="text" name="clip" id="clipper" bind:this={file_input} />
+
 	<input hidden type="text" name="location" bind:this={location} id="" />
 	<button
 		on:click|preventDefault={flipRecording}
