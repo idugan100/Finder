@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./static/FinderLogo.png" alt="Logo" width="1000" height="503">
+<img src="./static/FinderLogo.png" alt="Logo" width="500" height="251">
 </div>
 
 ## About Finder_
