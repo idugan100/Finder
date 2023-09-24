@@ -15,13 +15,13 @@ Video Will Go Here
 
 ## Arcitecture of Finder_
 
--Slevte with Tailwind, HTML, TypeScript and JavaScript for the site's frontend
--MySQL for database
--Face++ for facial comparisons
+-Slevte with Tailwind, HTML, TypeScript and JavaScript for the site's frontend\n
+-MySQL for database\n
+-Face++ for facial comparisons\n
 
 ## Team Finder_
-Finder_ was developed during hackUMBC 2023 by the following individuals:
-*Isaac Dugan -> Backend Lead
-*John Meyers -> Frontend Lead
-*James "Mikey" Montebell -> Database Lead
-*Brian Bowers -> Team Leader
+Finder_ was developed during hackUMBC 2023 by the following individuals:\n
+- Isaac Dugan, Backend Lead\n
+- John Meyers, Frontend Lead\n
+- James "Mikey" Montebell, Database Lead\n
+- Brian Bowers, Team Leader\n
